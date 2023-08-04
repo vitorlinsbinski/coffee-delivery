@@ -65,7 +65,7 @@ export function Cart() {
 
   function handleCreateNewOrder(data: newOrderFormData) {
     if (productsInCart.length > 0) {
-      const orderId = new Date().toString();
+      const orderId = new Date().toISOString();
       const orderData = {
         orderId,
         ...data,

@@ -50,6 +50,61 @@ export const HeroBanner = styled.section`
   .image {
     animation: FadeInRight 0.7s ease;
   }
+
+  @media (max-width: 1120px) {
+    .text {
+      max-width: 49.8rem;
+    }
+  }
+
+  @media (max-width: 991px) {
+    padding-top: 3.4rem;
+    padding-bottom: 3.8rem;
+
+    & > div {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .text {
+      max-width: 56.8rem;
+
+      h1 {
+        margin-bottom: 2rem;
+      }
+
+      p {
+        margin-bottom: 4.6rem;
+      }
+
+      ul {
+        justify-content: center;
+        margin-bottom: 4.8rem;
+      }
+    }
+  }
+
+  @media (max-width: 720px) {
+    padding-top: 2.4rem;
+    .text {
+      h1 {
+        font-size: 3.8rem;
+      }
+
+      p {
+        font-size: 1.8rem;
+        margin-bottom: 3.6rem;
+      }
+    }
+  }
+
+  @media (max-width: 540px) {
+    .text {
+      max-width: 96%;
+    }
+  }
 `;
 
 export const IconList = styled.div<IconProps>`
@@ -89,6 +144,12 @@ export const CoffeeListSection = styled.section`
     margin-bottom: 5.4rem;
     animation: FadeInDown 0.5s ease;
   }
+
+  @media (max-width: 540px) {
+    & > div {
+      text-align: center;
+    }
+  }
 `;
 
 export const CoffeeList = styled.ul`
@@ -96,4 +157,17 @@ export const CoffeeList = styled.ul`
   grid-template-columns: repeat(4, 1fr);
   column-gap: 3.2rem;
   row-gap: 4rem;
+
+  @media (max-width: 1120px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 540px) {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
 `;

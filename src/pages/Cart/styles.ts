@@ -17,6 +17,18 @@ export const MainFormArea = styled.main`
     align-items: flex-start;
     justify-content: space-between;
   }
+
+  @media (max-width: 991px) {
+    form {
+      flex-direction: column;
+      align-items: center;
+      gap: 2.8rem;
+    }
+  }
+
+  @media (max-width: 720px) {
+    margin-top: 3rem;
+  }
 `;
 
 export const OrderDataArea = styled.section`
@@ -34,6 +46,18 @@ export const OrderDataArea = styled.section`
     color: ${(props) => props.theme['base-subtitle']};
     margin-bottom: 0.3rem;
   }
+
+  @media (max-width: 1120px) {
+    max-width: 56rem;
+  }
+
+  @media (max-width: 991px) {
+    max-width: 80%;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
 `;
 
 export const OrderReviewArea = styled.section`
@@ -47,6 +71,14 @@ export const OrderReviewArea = styled.section`
     color: ${(props) => props.theme['base-subtitle']};
     margin-bottom: 1.5rem;
   }
+
+  @media (max-width: 991px) {
+    max-width: 80%;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
 `;
 
 export const ReviewCard = styled.div`
@@ -54,6 +86,10 @@ export const ReviewCard = styled.div`
   background-color: ${(props) => props.theme['base-card']};
   padding: 4rem;
   border-radius: 6px 44px 6px 44px;
+
+  @media (max-width: 540px) {
+    padding: 3rem;
+  }
 `;
 
 export const Products = styled.div`

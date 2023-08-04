@@ -10,6 +10,20 @@ export const MainContainer = styled.main`
     align-items: flex-end;
     justify-content: space-between;
   }
+
+  @media (max-width: 991px) {
+    margin-top: 3rem;
+
+    & > div {
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 5rem;
+    }
+  }
+
+  @media (max-width: 720px) {
+    margin-top: 2rem;
+  }
 `;
 
 export const LeftDiv = styled.div`
@@ -23,6 +37,17 @@ export const LeftDiv = styled.div`
     ${textL}
     color: ${(props) => props.theme['base-subtitle']};
     margin-bottom: 4rem;
+  }
+
+  @media (max-width: 720px) {
+    & > p {
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+    }
   }
 `;
 
@@ -59,6 +84,10 @@ export const OrderDetailsArea = styled.div`
 
     z-index: -1;
   }
+
+  @media (max-width: 720px) {
+    padding: 3rem 0 3rem 3rem;
+  }
 `;
 
 const BaseDetails = styled.div`
@@ -86,6 +115,8 @@ const BaseDetails = styled.div`
       ${textM}
       color: ${(props) => props.theme['base-text']};
     }
+
+    max-width: 70%;
   }
 `;
 

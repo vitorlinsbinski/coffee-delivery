@@ -84,7 +84,7 @@ export function Order() {
             <img src={deliverymanImage} alt="" />
           </>
         ) : (
-          <div>Error! There`s any other with ID: "{id}"</div>
+          <div>Error! There's no order with ID "{id}"</div>
         )}
       </ContainerBox>
     </MainContainer>

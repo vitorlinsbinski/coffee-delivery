@@ -126,6 +126,7 @@ export function ShoppingContextProvider({
 
   function createNewOrder(data: OrdersType) {
     setOrders([...orders, data]);
+    setProductsInCart([]);
   }
 
   return (

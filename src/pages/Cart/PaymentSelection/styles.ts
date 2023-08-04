@@ -36,17 +36,24 @@ export const PaymentContainer = styled.div`
       }
     }
   }
+
+  @media (max-width: 768px) {
+    padding: 3rem;
+  }
 `;
 
 export const SelectorArea = styled.div`
   display: flex;
   align-items: center;
   gap: 1.2rem;
+
+  flex-wrap: wrap;
 `;
 
 export const Selector = styled.div<SelectorProps>`
   width: 17.8rem;
-  padding: 1.6rem;
+  padding-left: 1.6rem;
+  height: 5.5rem;
   background-color: ${(props) =>
     props.$isSelected
       ? props.theme['purple-light']

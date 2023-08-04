@@ -38,6 +38,12 @@ export const ProductContainer = styled.div`
       color: ${(props) => props.theme['base-text']};
     }
   }
+
+  @media (max-width: 540px) {
+    .actions {
+      margin-right: 3rem;
+    }
+  }
 `;
 
 export const RemoveButton = styled.button`

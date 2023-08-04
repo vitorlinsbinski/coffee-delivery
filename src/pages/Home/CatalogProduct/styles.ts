@@ -56,6 +56,15 @@ export const Card = styled.li`
       gap: 1.6rem;
     }
   }
+
+  @media (max-width: 1120px) {
+    max-width: 100%;
+  }
+
+  @media (max-width: 540px) {
+    max-width: 80%;
+    height: auto;
+  }
 `;
 
 export const CoffeeTag = styled.li`

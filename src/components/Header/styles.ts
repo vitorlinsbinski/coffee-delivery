@@ -10,6 +10,8 @@ export const HeaderContainer = styled.header<HeaderProps>`
   top: 0;
   left: 0;
 
+  z-index: 10;
+
   background-color: ${(props) => (props.$isScrolled ? 'white' : 'transparent')};
   transition: background-color 0.2s;
 

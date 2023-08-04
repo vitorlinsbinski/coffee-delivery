@@ -46,6 +46,23 @@ export const AddressContainer = styled.div`
     row-gap: 1.6rem;
     column-gap: 1.2rem;
   }
+
+  @media (max-width: 1120px) {
+    & > div {
+      grid-template-columns: 40% auto 10%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 3rem;
+  }
+
+  @media (max-width: 540px) {
+    & > div {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 `;
 
 const BaseInput = styled.input`
@@ -73,6 +90,10 @@ export const CepInput = styled(BaseInput)`
   grid-area: cep;
   width: 100%;
   max-width: 20rem;
+
+  @media (max-width: 540px) {
+    max-width: 100%;
+  }
 `;
 
 export const StreetInput = styled(BaseInput)`
