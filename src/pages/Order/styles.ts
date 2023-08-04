@@ -4,6 +4,7 @@ import { textM, titleL, textL } from '../../styles/typography';
 
 export const MainContainer = styled.main`
   margin-top: 8rem;
+  margin-bottom: 3rem;
 
   & > div {
     display: flex;

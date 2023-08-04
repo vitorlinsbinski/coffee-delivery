@@ -96,6 +96,10 @@ export const AddCartButton = styled.button`
   &:hover {
     background-color: ${(props) => props.theme['pruple-dark']};
   }
+
+  @media (max-width: 720px) {
+    padding: 1.2rem;
+  }
 `;
 
 export const Price = styled.span`

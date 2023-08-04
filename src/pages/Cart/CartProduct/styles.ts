@@ -40,8 +40,22 @@ export const ProductContainer = styled.div`
   }
 
   @media (max-width: 540px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    gap: 1.4rem;
+
+    .image,
     .actions {
-      margin-right: 3rem;
+      margin-right: 0;
+    }
+
+    .actions {
+      margin-bottom: 0.8rem;
+      h4 {
+        margin-bottom: 1.2rem;
+      }
     }
   }
 `;
@@ -76,5 +90,9 @@ export const RemoveButton = styled.button`
 
   &:hover {
     background-color: ${(props) => props.theme['base-hover']};
+  }
+
+  @media (max-width: 540px) {
+    padding: 1.45rem 1.4rem;
   }
 `;

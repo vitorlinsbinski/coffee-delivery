@@ -71,7 +71,7 @@ export const GlobalStyle = createGlobalStyle`
 
     @media(max-width: 768px) {
         html {
-            font-size: calc(56%);
+            font-size: 59%;
         }
     }
 `;

@@ -28,4 +28,15 @@ export const CounterContainer = styled.div`
       color: ${(props) => props.theme['pruple-dark']};
     }
   }
+
+  @media (max-width: 720px) {
+    width: 9.8rem;
+    height: 4.8rem;
+    gap: 0.8rem;
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
 `;
