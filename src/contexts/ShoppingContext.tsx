@@ -1,4 +1,5 @@
-import { ReactNode, createContext, useState } from 'react';
+import { ReactNode, createContext, useReducer } from 'react';
+import { productsReducer } from '../reducers/products/reducer';
 
 interface ShoppingContextProviderProps {
   children: ReactNode;
@@ -27,9 +28,9 @@ interface ProductContextType {
 
 export const ShoppingContext = createContext({} as ProductContextType);
 
-type PaymentMethodType = 'creditCard' | 'debitCard' | 'money';
+export type PaymentMethodType = 'creditCard' | 'debitCard' | 'money';
 
-interface OrdersType {
+export interface OrdersType {
   orderId: string;
   cep: string;
   street: string;
@@ -41,92 +42,118 @@ interface OrdersType {
   products: ProductType[];
 }
 
+import {
+  addProductToCartAction,
+  removeProductFromCartAction,
+  addQuantityAction,
+  removeQuantityAction,
+  selectPaymentMethodAction,
+  createNewOrderAction,
+} from '../reducers/products/actions';
+
 export function ShoppingContextProvider({
   children,
 }: ShoppingContextProviderProps) {
-  const [productsInCart, setProductsInCart] = useState<ProductType[]>([]);
+  // const [productsInCart, setProductsInCart] = useState<ProductType[]>([]);
 
-  const [paymentMethod, setPaymentMethod] =
-    useState<PaymentMethodType>('creditCard');
+  const [productsState, dispatch] = useReducer(productsReducer, {
+    productsInCart: [],
+    paymentMethod: '',
+    orders: [],
+  });
 
-  const [orders, setOrders] = useState<OrdersType[]>([]);
+  const { productsInCart, orders, paymentMethod } = productsState;
+
+  // const [paymentMethod, setPaymentMethod] =
+  //   useState<PaymentMethodType>('creditCard');
+
+  // const [orders, setOrders] = useState<OrdersType[]>([]);
 
   function addProductToCart(data: ProductType) {
-    const isAlreadyInCart = productsInCart.find(
-      (product) => product.id === data.id
-    );
+    // const isAlreadyInCart = productsInCart.find(
+    //   (product) => product.id === data.id
+    // );
+    // if (isAlreadyInCart) {
+    //   const updatedProducts = productsInCart.map((product) => {
+    //     if (product.id === data.id) {
+    //       return {
+    //         ...product,
+    //         quantity: product.quantity + data.quantity,
+    //       };
+    //     } else {
+    //       return product;
+    //     }
+    //   });
+    //   setProductsInCart(updatedProducts);
+    // } else {
+    //   const newProduct = {
+    //     id: data.id,
+    //     imgPath: data.imgPath,
+    //     name: data.name,
+    //     quantity: data.quantity,
+    //     price: data.price,
+    //   };
+    //   setProductsInCart([...productsInCart, newProduct]);
+    // }
 
-    if (isAlreadyInCart) {
-      const updatedProducts = productsInCart.map((product) => {
-        if (product.id === data.id) {
-          return {
-            ...product,
-            quantity: product.quantity + data.quantity,
-          };
-        } else {
-          return product;
-        }
-      });
+    const newProduct = {
+      id: data.id,
+      imgPath: data.imgPath,
+      name: data.name,
+      quantity: data.quantity,
+      price: data.price,
+    };
 
-      setProductsInCart(updatedProducts);
-    } else {
-      const newProduct = {
-        id: data.id,
-        imgPath: data.imgPath,
-        name: data.name,
-        quantity: data.quantity,
-        price: data.price,
-      };
-
-      setProductsInCart([...productsInCart, newProduct]);
-    }
+    dispatch(addProductToCartAction(newProduct));
   }
 
-  function addQuantity(data: ProductType) {
-    const updatedProducts = productsInCart.map((product) => {
-      if (product.id === data.id) {
-        return {
-          ...product,
-          quantity: product.quantity + 1,
-        };
-      } else {
-        return product;
-      }
-    });
-
-    setProductsInCart(updatedProducts);
+  function addQuantity(product: ProductType) {
+    // const updatedProducts = productsInCart.map((product) => {
+    //   if (product.id === data.id) {
+    //     return {
+    //       ...product,
+    //       quantity: product.quantity + 1,
+    //     };
+    //   } else {
+    //     return product;
+    //   }
+    // });
+    // setProductsInCart(updatedProducts);
+    dispatch(addQuantityAction(product));
   }
 
-  function removeQuantity(data: ProductType) {
-    const updatedProducts = productsInCart.map((product) => {
-      if (product.id === data.id && product.quantity > 1) {
-        return {
-          ...product,
-          quantity: product.quantity - 1,
-        };
-      } else {
-        return product;
-      }
-    });
-
-    setProductsInCart(updatedProducts);
+  function removeQuantity(product: ProductType) {
+    // const updatedProducts = productsInCart.map((product) => {
+    //   if (product.id === data.id && product.quantity > 1) {
+    //     return {
+    //       ...product,
+    //       quantity: product.quantity - 1,
+    //     };
+    //   } else {
+    //     return product;
+    //   }
+    // });
+    // setProductsInCart(updatedProducts);
+    dispatch(removeQuantityAction(product));
   }
 
   function removeProductFromCart(id: string) {
-    const productsWithoutRemovedOne = productsInCart.filter(
-      (product) => product.id !== id
-    );
-
-    setProductsInCart(productsWithoutRemovedOne);
+    // const productsWithoutRemovedOne = productsInCart.filter(
+    //   (product) => product.id !== id
+    // );
+    // setProductsInCart(productsWithoutRemovedOne);
+    dispatch(removeProductFromCartAction(id));
   }
 
   function selectPaymentMethod(method: PaymentMethodType) {
-    setPaymentMethod(method);
+    // setPaymentMethod(method);
+    dispatch(selectPaymentMethodAction(method));
   }
 
-  function createNewOrder(data: OrdersType) {
-    setOrders([...orders, data]);
-    setProductsInCart([]);
+  function createNewOrder(order: OrdersType) {
+    // setOrders([...orders, data]);
+    // setProductsInCart([]);
+    dispatch(createNewOrderAction(order));
   }
 
   return (

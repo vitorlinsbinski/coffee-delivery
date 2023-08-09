@@ -61,7 +61,8 @@ export function Cart() {
     !watch('numberHome') ||
     !watch('neighborhood') ||
     !watch('city') ||
-    !watch('uf');
+    !watch('uf') ||
+    !paymentMethod;
 
   function handleCreateNewOrder(data: newOrderFormData) {
     if (productsInCart.length > 0) {
@@ -74,8 +75,6 @@ export function Cart() {
       };
 
       createNewOrder(orderData);
-
-      console.log('oderData', orderData);
 
       navigate(`/order/${orderId}`);
     }

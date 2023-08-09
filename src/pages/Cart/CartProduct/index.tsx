@@ -61,7 +61,7 @@ export function CartProduct({ product }: ProductProps) {
       </div>
 
       <div className="price">
-        <span>R$ {product.price.toFixed(2).toString().replace('.', ',')}</span>
+        <span>R$ 9.90</span>
       </div>
     </ProductContainer>
   );

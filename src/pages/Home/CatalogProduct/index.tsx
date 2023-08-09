@@ -33,7 +33,6 @@ export function CatalogProduct({ product }: CatalogProductProps) {
       price: product.price,
     };
 
-    console.log('new: ', newProduct);
     addProductToCart(newProduct);
   }
 
