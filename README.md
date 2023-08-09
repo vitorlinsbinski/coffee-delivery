@@ -1,6 +1,6 @@
 # Coffee-Delivery
 
-A coffe delivery website to practice ReactJS
+A coffee delivery website to practice ReactJS
 
 ## Concepts and features practiced
 
