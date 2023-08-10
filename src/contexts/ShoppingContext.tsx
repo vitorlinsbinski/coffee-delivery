@@ -1,4 +1,4 @@
-import { ReactNode, createContext, useReducer } from 'react';
+import { ReactNode, createContext, useEffect, useReducer } from 'react';
 import { productsReducer } from '../reducers/products/reducer';
 
 interface ShoppingContextProviderProps {
@@ -56,11 +56,28 @@ export function ShoppingContextProvider({
 }: ShoppingContextProviderProps) {
   // const [productsInCart, setProductsInCart] = useState<ProductType[]>([]);
 
-  const [productsState, dispatch] = useReducer(productsReducer, {
-    productsInCart: [],
-    paymentMethod: '',
-    orders: [],
-  });
+  const [productsState, dispatch] = useReducer(
+    productsReducer,
+    {
+      productsInCart: [],
+      paymentMethod: '' as PaymentMethodType,
+      orders: [],
+    },
+    (initialState) => {
+      const storedStateAsJSON = localStorage.getItem(
+        '@coffee-delivery: products-in-cart-1.0.0'
+      );
+
+      if (storedStateAsJSON) {
+        return {
+          ...initialState,
+          productsInCart: JSON.parse(storedStateAsJSON),
+        };
+      }
+
+      return initialState;
+    }
+  );
 
   const { productsInCart, orders, paymentMethod } = productsState;
 
@@ -68,6 +85,12 @@ export function ShoppingContextProvider({
   //   useState<PaymentMethodType>('creditCard');
 
   // const [orders, setOrders] = useState<OrdersType[]>([]);
+
+  useEffect(() => {
+    const stateJSON = JSON.stringify(productsInCart);
+
+    localStorage.setItem('@coffee-delivery: products-in-cart-1.0.0', stateJSON);
+  }, [productsInCart]);
 
   function addProductToCart(data: ProductType) {
     // const isAlreadyInCart = productsInCart.find(

@@ -172,6 +172,7 @@ export function productsReducer(state: ProductsState, action: Actions) {
 
       return produce(state, (draft) => {
         draft.orders.push(action.payload.order);
+        draft.productsInCart = [];
       });
     }
     default: {
