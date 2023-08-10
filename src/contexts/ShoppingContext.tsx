@@ -64,14 +64,19 @@ export function ShoppingContextProvider({
       orders: [],
     },
     (initialState) => {
-      const storedStateAsJSON = localStorage.getItem(
+      const productsInCartStateAsJSON = localStorage.getItem(
         '@coffee-delivery: products-in-cart-1.0.0'
       );
 
-      if (storedStateAsJSON) {
+      const ordersStateAsJSON = localStorage.getItem(
+        '@coffee-delivery: products-in-cart-1.0.0'
+      );
+
+      if (productsInCartStateAsJSON && ordersStateAsJSON) {
         return {
           ...initialState,
-          productsInCart: JSON.parse(storedStateAsJSON),
+          productsInCart: JSON.parse(productsInCartStateAsJSON),
+          orders: JSON.parse(ordersStateAsJSON),
         };
       }
 
@@ -91,6 +96,12 @@ export function ShoppingContextProvider({
 
     localStorage.setItem('@coffee-delivery: products-in-cart-1.0.0', stateJSON);
   }, [productsInCart]);
+
+  useEffect(() => {
+    const stateJSON = JSON.stringify(orders);
+
+    localStorage.setItem('@coffee-delivery: orders-1.0.0', stateJSON);
+  }, [orders]);
 
   function addProductToCart(data: ProductType) {
     // const isAlreadyInCart = productsInCart.find(

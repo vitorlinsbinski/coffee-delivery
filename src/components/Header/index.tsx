@@ -18,7 +18,12 @@ import { ShoppingContext } from '../../contexts/ShoppingContext';
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const { productsInCart } = useContext(ShoppingContext);
+  const { productsInCart, orders } = useContext(ShoppingContext);
+
+  const latestCityStored =
+    orders.length > 0 ? orders[orders.length - 1].city : '';
+
+  const latestUfStored = orders.length > 0 ? orders[orders.length - 1].uf : '';
 
   useEffect(() => {
     function handleScroll() {
@@ -42,10 +47,14 @@ export function Header() {
         </NavLink>
 
         <nav>
-          <LocationTag>
-            <MapPin size={22} weight="fill" />
-            <span>Sinop, MT</span>
-          </LocationTag>
+          {latestCityStored && latestUfStored && (
+            <LocationTag>
+              <MapPin size={22} weight="fill" />
+              <span>
+                {latestCityStored}, {latestUfStored}
+              </span>
+            </LocationTag>
+          )}
 
           <NavLink to="/cart">
             <CartTag>
