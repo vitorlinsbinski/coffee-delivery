@@ -48,7 +48,7 @@ export function CatalogProduct({ product }: CatalogProductProps) {
 
   return (
     <Card>
-      <img src={product.imgPath} alt="" />
+      <img src={`coffee-delivery/src/assets/${product.imgPath}`} alt="" />
       <ul>
         {product.tags.map((tag) => (
           <CoffeeTag key={tag}>{tag.toUpperCase()}</CoffeeTag>
