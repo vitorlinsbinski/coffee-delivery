@@ -37,7 +37,7 @@ export function Header() {
   return (
     <HeaderContainer $isScrolled={isScrolled}>
       <ContainerBox>
-        <NavLink to="/">
+        <NavLink to="/coffee-delivery">
           <div className="logo">
             <img
               src={coffeeDeliveryLogo}
@@ -56,7 +56,7 @@ export function Header() {
             </LocationTag>
           )}
 
-          <NavLink to="/cart">
+          <NavLink to="/coffee-delivery/cart">
             <CartTag>
               <ShoppingCart size={22} weight="fill" />
               {productsInCart.length > 0 && (

@@ -76,7 +76,7 @@ export function Cart() {
 
       createNewOrder(orderData);
 
-      navigate(`/order/${orderId}`);
+      navigate(`/coffee-delivery/order/${orderId}`);
     }
   }
 

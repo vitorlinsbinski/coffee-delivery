@@ -7,10 +7,10 @@ import { Order } from './pages/Order';
 export function Router() {
   return (
     <Routes>
-      <Route path="/" element={<DefaultLayout />}>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/cart" element={<Cart />}></Route>
-        <Route path="/order/:id" element={<Order />}></Route>
+      <Route path="/coffee-delivery" element={<DefaultLayout />}>
+        <Route path="/coffee-delivery" element={<Home />}></Route>
+        <Route path="/coffee-delivery/cart" element={<Cart />}></Route>
+        <Route path="/coffee-delivery/order/:id" element={<Order />}></Route>
       </Route>
     </Routes>
   );
