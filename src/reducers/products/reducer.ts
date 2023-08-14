@@ -57,7 +57,8 @@ export function productsReducer(state: ProductsState, action: Actions) {
 
         return produce(state, (draft) => {
           draft.productsInCart[currentProductIndex].quantity =
-            action.payload.newProduct.quantity + 1;
+            draft.productsInCart[currentProductIndex].quantity +
+            action.payload.newProduct.quantity;
         });
       } else {
         // return {

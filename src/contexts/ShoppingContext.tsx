@@ -69,7 +69,7 @@ export function ShoppingContextProvider({
       );
 
       const ordersStateAsJSON = localStorage.getItem(
-        '@coffee-delivery: products-in-cart-1.0.0'
+        '@coffee-delivery: orders-1.0.0'
       );
 
       if (productsInCartStateAsJSON && ordersStateAsJSON) {
