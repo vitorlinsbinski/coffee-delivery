@@ -25,4 +25,4 @@ A coffee delivery website to practice ReactJS
 - Finish the order
 
 <img src = "./src/assets/screencapture-vitorlinsbinski-github-io-coffee-delivery-2023-08-14-11_26_53.png"></img>
-<img src = "./src/assets/screencapture-vitorlinsbinski-github-io-coffee-delivery-cart-2023-08-14-11_28_56"></img>
+<img src = "./src/assets/screencapture-vitorlinsbinski-github-io-coffee-delivery-cart-2023-08-14-11_28_56.png"></img>
