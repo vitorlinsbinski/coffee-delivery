@@ -168,7 +168,9 @@ export function ShoppingContextProvider({
     //   }
     // });
     // setProductsInCart(updatedProducts);
-    dispatch(removeQuantityAction(product));
+    if (product.quantity > 1) {
+      dispatch(removeQuantityAction(product));
+    }
   }
 
   function removeProductFromCart(id: string) {
