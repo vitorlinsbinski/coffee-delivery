@@ -23,3 +23,6 @@ A coffee delivery website to practice ReactJS
 - Modify the quantity of a certain product in the cart
 - Select payment method
 - Finish the order
+
+<img src = "./src/assets/screencapture-vitorlinsbinski-github-io-coffee-delivery-2023-08-14-11_26_53.png"></img>
+<img src = "./src/assets/screencapture-vitorlinsbinski-github-io-coffee-delivery-cart-2023-08-14-11_28_56"></img>
