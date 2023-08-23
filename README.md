@@ -26,5 +26,8 @@ A coffee delivery website to practice ReactJS
 
 [Coffee Delivery Deploy](https://vitorlinsbinski.github.io/coffee-delivery) 
 
+<h3>Home Page</h3>
 <img src = "./src/assets/screencapture-vitorlinsbinski-github-io-coffee-delivery-2023-08-14-11_26_53.png"></img>
+
+<h3>Cart Page</h3>
 <img src = "./src/assets/screencapture-vitorlinsbinski-github-io-coffee-delivery-cart-2023-08-14-11_28_56.png"></img>
