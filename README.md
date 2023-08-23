@@ -1,8 +1,8 @@
-# Coffee-Delivery
+<h1 align="center">☕ Coffee Delivery</h1>
 
 A coffee delivery website to practice ReactJS
 
-## Concepts and features practiced
+## 🚀 Concepts and features practiced
 
 - useState
 - State Immutability
@@ -16,7 +16,7 @@ A coffee delivery website to practice ReactJS
 - Styled Components
 - Themes with Styled Components
 
-## Functionalities
+## 💻 Functionalities
 
 - Add a product to the cart
 - Remove a product from the cart
