@@ -48,7 +48,7 @@ A coffee delivery website to practice ReactJS
 
 ```bash
     # Clone this repository on your machine:
-    $ git clone [https://github.com/vitorlinsbinski/dt-money.git](https://github.com/vitorlinsbinski/coffee-delivery.git)
+    $ git clone https://github.com/vitorlinsbinski/coffee-delivery.git
 
     # Access the project folder in your terminal:
     $ cd coffee-delivery
