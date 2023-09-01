@@ -15,7 +15,7 @@ A coffee delivery website to practice ReactJS
 - React Router DOM
 - Styled Components
 - Themes with Styled Components
-- 
+  
 ## 💻 Features
 
 - Add a product to the cart
