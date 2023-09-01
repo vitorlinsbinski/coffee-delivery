@@ -2,6 +2,26 @@
 
 A coffee delivery website to practice ReactJS
 
+<img src = "https://img.shields.io/static/v1?label=node&message=v16.15.0&color=blue&style=plastic&logo="/>
+
+<img src = "https://img.shields.io/static/v1?label=npm&message=v8.5.5&color=blue&style=plastic&logo="/>
+
+<img src = "https://img.shields.io/static/v1?label=Vite&message=v4.4.5&color=blue&style=plastic&logo="/>
+
+<img src = "https://img.shields.io/static/v1?label=ReactJS&message=v18.2.0&color=blue&style=plastic&logo="/>
+
+<img src = "https://img.shields.io/static/v1?label=TypeScript&message=v5.0.2&color=blue&style=plastic&logo="/>
+
+<img src = "https://img.shields.io/static/v1?label=Axios&message=v1.5.0&color=blue&style=plastic&logo="/>
+
+<img src = "https://img.shields.io/static/v1?label=Styled Components&message=v6.0.7&color=blue&style=plastic&logo="/>
+
+<img src = "https://img.shields.io/static/v1?label=JSON Server&message=v0.17.3&color=blue&style=plastic&logo="/>
+
+<h4 align="center"> 
+	☕ Coffee Delivery | Done ✔️
+</h4>
+
 ## 🚀 Concepts and features practiced
 
 - useState
@@ -51,12 +71,9 @@ A coffee delivery website to practice ReactJS
 - [TypeScript](https://www.typescriptlang.org/)
 - [React Hook Form](https://www.react-hook-form.com/)
 - [ZOD](https://zod.dev/)
-- [JSON Server](https://github.com/typicode/json-server)
-- [Radix UI](https://www.radix-ui.com/)
-- [Axios](https://axios-http.com/ptbr/docs/intro)
 - [Phosphor React](https://github.com/phosphor-icons/react)
 - [Styled Components](https://styled-components.com/)
-- [use-context-selector](https://github.com/dai-shi/use-context-selector)
+- [React Router DOM](https://reactrouter.com/en/main)
 
 ## Final Result
 
