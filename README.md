@@ -12,11 +12,7 @@ A coffee delivery website to practice ReactJS
 
 <img src = "https://img.shields.io/static/v1?label=TypeScript&message=v5.0.2&color=blue&style=plastic&logo="/>
 
-<img src = "https://img.shields.io/static/v1?label=Axios&message=v1.5.0&color=blue&style=plastic&logo="/>
-
 <img src = "https://img.shields.io/static/v1?label=Styled Components&message=v6.0.7&color=blue&style=plastic&logo="/>
-
-<img src = "https://img.shields.io/static/v1?label=JSON Server&message=v0.17.3&color=blue&style=plastic&logo="/>
 
 <h4 align="center"> 
 	☕ Coffee Delivery | Done ✔️
