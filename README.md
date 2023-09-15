@@ -1,6 +1,6 @@
 <h1 align="center">☕ Coffee Delivery</h1>
 
-A coffee delivery website to practice ReactJS
+<p>A coffee delivery website to practice ReactJS</p>
 
 <div align="center">
   <div style="display: flex; justify-content: space-between; align-items: center;">
