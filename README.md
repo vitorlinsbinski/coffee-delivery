@@ -5,15 +5,10 @@ A coffee delivery website to practice ReactJS
 <div align="center">
   <div style="display: flex; justify-content: space-between; align-items: center;">
 	<img src = "https://img.shields.io/static/v1?label=node&message=v16.15.0&color=blue&style=plastic&logo="/>
-
 	<img src = "https://img.shields.io/static/v1?label=npm&message=v8.5.5&color=blue&style=plastic&logo="/>
-
 	<img src = "https://img.shields.io/static/v1?label=Vite&message=v4.4.5&color=blue&style=plastic&logo="/>
-
 	<img src = "https://img.shields.io/static/v1?label=ReactJS&message=v18.2.0&color=blue&style=plastic&logo="/>
-
 	<img src = "https://img.shields.io/static/v1?label=TypeScript&message=v5.0.2&color=blue&style=plastic&logo="/>
-
 	<img src = "https://img.shields.io/static/v1?label=Styled Components&message=v6.0.7&color=blue&style=plastic&logo="/>
   </div>
 </div>
